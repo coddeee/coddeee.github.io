@@ -1,172 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sunny - Full-Stack Developer | Azure Certified | React, C#/.NET, Flutter">
-    <meta name="theme-color" content="#0d47a1">
-    <title>Sunny - Full-Stack Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Software Engineer</title>
+  <meta name="description" content="Professional CV of Your Name, Software Engineer." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <h1>Sunny</h1>
-                <p class="title">Full-Stack Developer | Azure Certified | React • C#/.NET • Flutter</p>
-                <div class="contact-links">
-                    <a href="https://github.com/coddeee" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="mailto:your-email@example.com">Email</a>
-                </div>
-            </div>
+  <main class="cv">
+
+    <!-- ============ HEADER ============ -->
+    <header class="cv-header">
+      <h1 class="name">Your Name</h1>
+      <p class="title">Software Engineer</p>
+      <ul class="contact" aria-label="Contact information">
+        <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li><span>City, Country</span></li>
+        <li><a href="https://github.com/coddeee" target="_blank" rel="noopener">github.com/coddeee</a></li>
+        <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">linkedin.com/in/your-handle</a></li>
+        <li><a href="https://coddeee.github.io" target="_blank" rel="noopener">coddeee.github.io</a></li>
+      </ul>
+    </header>
+
+    <!-- ============ SUMMARY ============ -->
+    <section class="cv-section">
+      <h2>Profile</h2>
+      <p>
+        Software engineer with a focus on building reliable, well-tested
+        backend services and clean, maintainable front-end code. Comfortable
+        across the stack and experienced shipping features from design through
+        deployment. Replace this paragraph with a two- or three-sentence
+        summary of who you are, what you build, and what you are looking for.
+      </p>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="cv-section">
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <header class="entry-header">
+          <div>
+            <h3 class="role">Job Title</h3>
+            <p class="org">Company Name <span class="loc">— City, Country</span></p>
+          </div>
+          <p class="dates">Mon YYYY – Present</p>
         </header>
+        <ul class="bullets">
+          <li>Describe a measurable accomplishment (e.g., reduced deployment time by 40% by introducing CI/CD pipelines).</li>
+          <li>Highlight a technology you led or introduced and the business impact it had.</li>
+          <li>Mention collaboration: cross-functional work, mentorship, or code review practices.</li>
+        </ul>
+      </article>
 
-        <!-- Summary -->
-        <section class="section">
-            <h2>About</h2>
-            <p>Full-stack developer specializing in C#/.NET Core backend and React/Flutter frontend with hands-on experience in Azure cloud services. AZ-204 certified. Strong focus on clean code, creative problem-solving, and building financial/analytical tools. Currently exploring serverless architecture and AI-driven applications.</p>
-        </section>
+      <article class="entry">
+        <header class="entry-header">
+          <div>
+            <h3 class="role">Previous Job Title</h3>
+            <p class="org">Previous Company <span class="loc">— City, Country</span></p>
+          </div>
+          <p class="dates">Mon YYYY – Mon YYYY</p>
+        </header>
+        <ul class="bullets">
+          <li>Result-oriented bullet describing a project you owned end-to-end.</li>
+          <li>Specific metric, scale, or scope (e.g., served 1M+ requests/day).</li>
+          <li>A technology or pattern you became known for.</li>
+        </ul>
+      </article>
 
-        <!-- Technical Skills -->
-        <section class="section">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>.NET Core</li>
-                        <li>ASP.NET Core</li>
-                        <li>Python</li>
-                        <li>REST APIs</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>React</li>
-                        <li>Blazor</li>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
-                        <li>Chart.js</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Mobile</h3>
-                    <ul>
-                        <li>Flutter</li>
-                        <li>Dart</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <ul>
-                        <li>Azure App Service</li>
-                        <li>Azure Functions</li>
-                        <li>Azure SQL Database</li>
-                        <li>Key Vault</li>
-                        <li>Managed Identity</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>SQL Server</li>
-                        <li>SQLite</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <ul>
-                        <li>Visual Studio</li>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Zerodha Kite Connect</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+      <article class="entry">
+        <header class="entry-header">
+          <div>
+            <h3 class="role">Internship / Earlier Role</h3>
+            <p class="org">Company Name <span class="loc">— City, Country</span></p>
+          </div>
+          <p class="dates">Mon YYYY – Mon YYYY</p>
+        </header>
+        <ul class="bullets">
+          <li>What you built and the stack you used.</li>
+          <li>A skill you developed that you still use today.</li>
+        </ul>
+      </article>
+    </section>
 
-        <!-- Certifications -->
-        <section class="section">
-            <h2>Certifications</h2>
-            <div class="certification">
-                <span class="cert-badge">✓</span>
-                <div>
-                    <h3>AZ-204: Azure Developer Associate</h3>
-                    <p>Microsoft Azure certification demonstrating expertise in developing solutions using Azure services.</p>
-                </div>
-            </div>
-        </section>
+    <!-- ============ EDUCATION ============ -->
+    <section class="cv-section">
+      <h2>Education</h2>
 
-        <!-- Key Projects -->
-        <section class="section">
-            <h2>Key Projects</h2>
+      <article class="entry">
+        <header class="entry-header">
+          <div>
+            <h3 class="role">B.Tech / B.Sc. in Computer Science</h3>
+            <p class="org">University Name <span class="loc">— City, Country</span></p>
+          </div>
+          <p class="dates">YYYY – YYYY</p>
+        </header>
+        <ul class="bullets">
+          <li>GPA / CGPA: X.XX / Y.YY (optional)</li>
+          <li>Relevant coursework: Data Structures, Algorithms, Operating Systems, Databases, Distributed Systems.</li>
+          <li>Honors / scholarships / awards (optional).</li>
+        </ul>
+      </article>
+    </section>
 
-            <div class="project">
-                <h3>Interactive Financial Calculator</h3>
-                <p class="tech-stack">React • JavaScript • Chart.js</p>
-                <p>FD vs. Mutual Fund comparison tool with real-time calculations, SIP mode, and compounding analysis. Features interactive visualizations for financial decision-making.</p>
-                <a href="https://github.com/coddeee" target="_blank" class="project-link">View Project →</a>
-            </div>
+    <!-- ============ PROJECTS ============ -->
+    <section class="cv-section">
+      <h2>Projects</h2>
 
-            <div class="project">
-                <h3>WhatsApp Chat Analysis Dashboard</h3>
-                <p class="tech-stack">Full-Stack • React • C# • Chart.js</p>
-                <p>Comprehensive relationship sentiment analysis tool featuring emotional tracking, conflict pattern detection, relationship timeline milestones, and interactive data visualizations. Demonstrates full-stack capability and creative problem-solving.</p>
-                <a href="https://github.com/coddeee" target="_blank" class="project-link">View Project →</a>
-            </div>
+      <article class="entry">
+        <header class="entry-header">
+          <div>
+            <h3 class="role">
+              Project Name
+              <a class="link" href="https://github.com/coddeee/project-repo" target="_blank" rel="noopener">[repo]</a>
+            </h3>
+            <p class="org">Tech: Python, FastAPI, PostgreSQL, Docker</p>
+          </div>
+          <p class="dates">YYYY</p>
+        </header>
+        <ul class="bullets">
+          <li>One-line description of what the project does and who it is for.</li>
+          <li>Notable technical decision or scale (e.g., handles X requests, uses Y caching strategy).</li>
+          <li>Outcome or learning: stars, users, or what you took away from building it.</li>
+        </ul>
+      </article>
 
-            <div class="project">
-                <h3>ASCII Art Pyramid Program</h3>
-                <p class="tech-stack">C# • Console Application</p>
-                <p>Robust ASCII art generation program with both hardcoded and terminal-input variants. Demonstrates clean code practices, input validation, and algorithmic thinking.</p>
-                <a href="https://github.com/coddeee" target="_blank" class="project-link">View Project →</a>
-            </div>
+      <article class="entry">
+        <header class="entry-header">
+          <div>
+            <h3 class="role">
+              Another Project
+              <a class="link" href="https://github.com/coddeee/another-repo" target="_blank" rel="noopener">[repo]</a>
+            </h3>
+            <p class="org">Tech: TypeScript, React, Node.js</p>
+          </div>
+          <p class="dates">YYYY</p>
+        </header>
+        <ul class="bullets">
+          <li>What problem this project solves.</li>
+          <li>Interesting implementation detail.</li>
+        </ul>
+      </article>
+    </section>
 
-            <div class="project">
-                <h3>PortraitForge</h3>
-                <p class="tech-stack">React • Creative Development</p>
-                <p>React template for portrait-to-3D-printable conversion. Showcases interest in creative frontend development and computer vision-adjacent applications.</p>
-                <a href="https://github.com/coddeee" target="_blank" class="project-link">View Project →</a>
-            </div>
-        </section>
+    <!-- ============ SKILLS ============ -->
+    <section class="cv-section">
+      <h2>Skills &amp; Technologies</h2>
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd>Python, JavaScript / TypeScript, Java, Go, SQL</dd>
 
-        <!-- In Progress Projects -->
-        <section class="section">
-            <h2>In Progress / Pipeline</h2>
-            <ul class="projects-list">
-                <li><strong>MCQ Flutter App</strong> - Interactive quiz application with progress tracking</li>
-                <li><strong>Diet Planner Web App</strong> - Full-stack nutrition management tool</li>
-                <li><strong>Service Marketplace Backend</strong> - Scalable microservices architecture</li>
-                <li><strong>Trading Bot</strong> - Python + C# integration with Zerodha Kite Connect API</li>
-                <li><strong>Azure Serverless Builder Tool</strong> - Utility for rapid Azure Functions deployment</li>
-            </ul>
-        </section>
+        <dt>Frameworks</dt>
+        <dd>React, Node.js, Express, FastAPI, Django, Spring Boot</dd>
 
-        <!-- Experience Highlights -->
-        <section class="section">
-            <h2>Experience Highlights</h2>
-            <ul class="experience-list">
-                <li>✓ Full-stack project ownership from design to deployment</li>
-                <li>✓ Azure cloud services implementation (App Service, Functions, SQL Database, Key Vault)</li>
-                <li>✓ Database design and optimization (SQL Server, SQLite)</li>
-                <li>✓ Compliance & regulatory analysis (Insurance policy documentation)</li>
-                <li>✓ Financial modeling and analysis</li>
-                <li>✓ Clean code practices and code review</li>
-            </ul>
-        </section>
+        <dt>Databases</dt>
+        <dd>PostgreSQL, MySQL, MongoDB, Redis</dd>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2026 Sunny. Built with clean code and ☕ coffee.</p>
-            <p class="footer-subtext">Environment: MacBook Air M3 | Efficiency-focused | Open to opportunities</p>
-        </footer>
-    </div>
+        <dt>DevOps &amp; Cloud</dt>
+        <dd>Docker, Kubernetes, AWS, GitHub Actions, CI/CD</dd>
+
+        <dt>Tools</dt>
+        <dd>Git, Linux, VS Code, Jira, Figma</dd>
+
+        <dt>Practices</dt>
+        <dd>TDD, Code Review, Agile / Scrum, System Design</dd>
+      </dl>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="cv-footer">
+      <p>Last updated: <time datetime="2026-05">May 2026</time> · <a href="cv.pdf">Download PDF</a></p>
+    </footer>
+
+  </main>
 </body>
 </html>

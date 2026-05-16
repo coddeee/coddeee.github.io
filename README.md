@@ -1,47 +1,66 @@
-# Sunny - Full-Stack Developer Resume
+# coddeee.github.io
 
-Welcome! This is my professional resume hosted on GitHub Pages.
+Personal CV / portfolio site, served at **https://coddeee.github.io**.
 
-## 🌐 Live Resume
-**Visit:** [coddeee.github.io](https://coddeee.github.io)
+## Files
 
-## 💻 Tech Stack
-- **Backend:** C#, .NET Core, ASP.NET Core, Python
-- **Frontend:** React, Blazor, JavaScript, HTML/CSS
-- **Mobile:** Flutter, Dart
-- **Cloud:** Azure (App Service, Functions, SQL Database, Key Vault, Managed Identity)
-- **Databases:** SQL Server, SQLite
-- **Tools:** Visual Studio, Git, GitHub
+- `index.html` — the CV page itself (structure + content)
+- `style.css` — classic professional styling, print-ready
+- `cv.pdf` — optional PDF version linked from the footer (add your own)
 
-## 🎓 Certifications
-- **AZ-204:** Azure Developer Associate (Microsoft)
+## Customising the CV
 
-## 📁 Key Projects
-1. **Interactive Financial Calculator** - FD vs. Mutual Fund comparison tool
-2. **WhatsApp Chat Analysis Dashboard** - Sentiment analysis & relationship insights
-3. **ASCII Art Pyramid Program** - C# console application with clean code
-4. **PortraitForge** - React template for creative applications
+Open `index.html` and replace the placeholder content. The sections to edit are:
 
-## 🚀 In Progress
-- MCQ Flutter App
-- Diet Planner Web App
-- Service Marketplace Backend
-- Trading Bot (Zerodha Kite Connect)
-- Azure Serverless Builder Tool
+1. **Header** — `Your Name`, title, email, location, GitHub, LinkedIn, site URL
+2. **Profile** — 2–3 sentence summary
+3. **Experience** — one `<article class="entry">` block per role
+4. **Education** — same `<article>` pattern as Experience
+5. **Projects** — links go in the `<a class="link" href="...">[repo]</a>` tag
+6. **Skills & Technologies** — edit the `<dt>` / `<dd>` pairs
 
-## 📝 About This Site
-This resume website is built with:
-- Clean, semantic HTML
-- Modern CSS with dark mode support
-- Fully responsive design
-- Zero dependencies (pure HTML/CSS)
-- Optimized for performance
+Each entry block looks like this — copy/paste to add more:
 
-## 🔗 Connect
-- **GitHub:** [@coddeee](https://github.com/coddeee)
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com)
-- **Email:** [your-email@example.com](mailto:your-email@example.com)
+```html
+<article class="entry">
+  <header class="entry-header">
+    <div>
+      <h3 class="role">Role / Title</h3>
+      <p class="org">Organisation <span class="loc">— City</span></p>
+    </div>
+    <p class="dates">Mon YYYY – Mon YYYY</p>
+  </header>
+  <ul class="bullets">
+    <li>Achievement or responsibility.</li>
+  </ul>
+</article>
+```
 
----
+## Generating a PDF
 
-*Last Updated: May 2026*
+Open `index.html` in Chrome, **File → Print → Save as PDF**. The print
+stylesheet hides the footer and tightens margins automatically.
+
+Save the file as `cv.pdf` in the repo root so the footer link works.
+
+## Deploying to GitHub Pages
+
+1. Commit the files to the `main` branch of `coddeee/coddeee.github.io`:
+   ```bash
+   git add index.html style.css README.md
+   git commit -m "Add professional CV"
+   git push origin main
+   ```
+2. In the repo on GitHub: **Settings → Pages**, confirm the source is set to
+   `main` / root.
+3. After a minute the site is live at https://coddeee.github.io.
+
+## Local preview
+
+Just open `index.html` in a browser — no build step required. For a local
+server (so relative paths behave like on GitHub Pages):
+
+```bash
+python3 -m http.server 8000
+# then visit http://localhost:8000
+```
