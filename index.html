@@ -3,176 +3,764 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Software Engineer</title>
-  <meta name="description" content="Professional CV of Your Name, Software Engineer." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Abhishek Chauhan — Full-Stack .NET Engineer</title>
+  <meta name="description" content="Portfolio of Abhishek Chauhan — 10-year Full-Stack .NET Engineer, Technical Lead, Azure Certified, based in Noida India." />
+  <meta property="og:title" content="Abhishek Chauhan — Full-Stack .NET Engineer" />
+  <meta property="og:description" content="10 years of enterprise SaaS, cloud-native systems and team leadership. Microsoft Certified Azure Developer." />
+  <meta property="og:url" content="https://coddeee.github.io" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #21262d;
+      --border: #30363d;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --accent3: #d2a8ff;
+      --accent-warm: #ffa657;
+      --tag-bg: #1f3550;
+      --tag-text: #58a6ff;
+      --radius: 12px;
+      --radius-sm: 6px;
+      --max: 900px;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── NAVBAR ────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,17,23,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 2rem;
+    }
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* ── HERO ──────────────────────────────────── */
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+      max-width: 620px;
+    }
+    .hero-summary {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      max-width: 660px;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #0d1117;
+    }
+    .btn-primary:hover { background: #79c0ff; text-decoration: none; }
+    .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: transparent;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+    /* ── BADGES ────────────────────────────────── */
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .badge {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+    .badge-blue   { background: #1f3550; color: #58a6ff; }
+    .badge-green  { background: #1a3528; color: #3fb950; }
+    .badge-purple { background: #2d1f4f; color: #d2a8ff; }
+    .badge-orange { background: #3d2a13; color: #ffa657; }
+
+    /* ── SECTION ───────────────────────────────── */
+    section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── EXPERIENCE CARDS ──────────────────────── */
+    .timeline { display: flex; flex-direction: column; gap: 1.25rem; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--accent); }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .card-title { font-size: 1.05rem; font-weight: 600; }
+    .card-company {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .card-loc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+    .card-date {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      background: var(--surface2);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+    }
+    .card-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin: 0.8rem 0;
+    }
+    .card-bullets li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .card-bullets li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+    }
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 4px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-weight: 500;
+    }
+
+    /* ── SKILLS GRID ───────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .skill-group-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.7rem;
+      font-family: var(--mono);
+    }
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .skill-pill {
+      font-size: 0.78rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 4px;
+      background: var(--surface2);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    /* ── PROJECTS ──────────────────────────────── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .project-icon { font-size: 1.5rem; }
+    .project-name { font-weight: 600; font-size: 1rem; }
+    .project-desc { font-size: 0.87rem; color: var(--text-muted); flex: 1; }
+    .project-links { display: flex; gap: 0.5rem; margin-top: 0.4rem; }
+    .project-link {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      transition: all 0.15s;
+    }
+    .project-link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+    /* ── STATS ─────────────────────────────────── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: var(--mono);
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ── CERT ──────────────────────────────────── */
+    .cert-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .cert-icon { font-size: 2rem; }
+    .cert-name { font-weight: 600; font-size: 0.95rem; }
+    .cert-issuer { font-size: 0.82rem; color: var(--text-muted); }
+
+    /* ── CONTACT ───────────────────────────────── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .contact-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s;
+    }
+    .contact-item:hover { border-color: var(--accent); text-decoration: none; }
+    .contact-icon { font-size: 1.2rem; }
+    .contact-label { font-size: 0.78rem; color: var(--text-muted); }
+    .contact-value { font-size: 0.88rem; font-weight: 500; }
+
+    /* ── FOOTER ────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-family: var(--mono);
+    }
+
+    /* ── RESPONSIVE ────────────────────────────── */
+    @media (max-width: 600px) {
+      nav { padding: 0.75rem 1rem; }
+      .nav-links { gap: 1rem; }
+      .hero { padding: 3rem 1rem 2rem; }
+      section { padding: 2rem 1rem; }
+      .card-header { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
-  <main class="cv">
 
-    <!-- ============ HEADER ============ -->
-    <header class="cv-header">
-      <h1 class="name">Your Name</h1>
-      <p class="title">Software Engineer</p>
-      <ul class="contact" aria-label="Contact information">
-        <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
-        <li><span>City, Country</span></li>
-        <li><a href="https://github.com/coddeee" target="_blank" rel="noopener">github.com/coddeee</a></li>
-        <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">linkedin.com/in/your-handle</a></li>
-        <li><a href="https://coddeee.github.io" target="_blank" rel="noopener">coddeee.github.io</a></li>
+<!-- NAVBAR -->
+<nav>
+  <span class="nav-logo">&lt;abhishek /&gt;</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="about">
+  <p class="hero-eyebrow">👋 Hello, I'm</p>
+  <h1>Abhishek <span>Chauhan</span></h1>
+  <p class="hero-subtitle">Full-Stack .NET Engineer &amp; Technical Lead — 10 years building enterprise SaaS on Azure</p>
+  <p class="hero-summary">
+    Results-driven engineer with a decade of end-to-end product delivery across enterprise SaaS, data platforms, and cloud-native systems. Currently leading a team of 5 as Manager I (Technical Lead) at CG Infinity, architecting Microservices on Microsoft Azure. Six years of team leadership, international delivery in Oslo, Norway, and a consistent track record of CI/CD-driven efficiency. Microsoft Certified Azure Developer Associate.
+  </p>
+
+  <div class="badge-row">
+    <span class="badge badge-blue">Microsoft Certified Azure Developer</span>
+    <span class="badge badge-green">10 Years Experience</span>
+    <span class="badge badge-purple">Technical Lead</span>
+    <span class="badge badge-orange">International Delivery</span>
+  </div>
+
+  <div class="hero-links">
+    <a class="btn btn-primary" href="mailto:chauhana089@gmail.com">✉ Get in touch</a>
+    <a class="btn btn-ghost" href="https://github.com/coddeee" target="_blank" rel="noopener">⌥ GitHub</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/abhishek-chauhan" target="_blank" rel="noopener">in LinkedIn</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<section>
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-number">10</div><div class="stat-label">Years experience</div></div>
+    <div class="stat-card"><div class="stat-number">5</div><div class="stat-label">Engineers led</div></div>
+    <div class="stat-card"><div class="stat-number">40%</div><div class="stat-label">Deployment time cut</div></div>
+    <div class="stat-card"><div class="stat-number">88.6M</div><div class="stat-label">Records migrated</div></div>
+    <div class="stat-card"><div class="stat-number">35%</div><div class="stat-label">API response improvement</div></div>
+    <div class="stat-card"><div class="stat-number">🇳🇴</div><div class="stat-label">International delivery — Oslo</div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">// work history</p>
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Manager I — Technical Lead</div>
+          <div class="card-company">CG Infinity</div>
+          <div class="card-loc">📍 Noida, India (On-site)</div>
+        </div>
+        <span class="card-date">Mar 2023 – Present</span>
+      </div>
+      <ul class="card-bullets">
+        <li>Architect and deliver enterprise Microservices SaaS products on .NET Core and Angular, deployed on Microsoft Azure.</li>
+        <li>Lead a team of 5 engineers — sprint planning, code reviews, mentoring, and stakeholder communication.</li>
+        <li>Drove CI/CD pipeline adoption via Azure DevOps, reducing deployment time by 40%.</li>
+        <li>Champion proactive client engagement — surface known issues before clients report them, present data-backed timelines.</li>
+        <li>Conduct POCs and future-scope farming to identify technology upgrade opportunities.</li>
       </ul>
-    </header>
+      <div class="tags">
+        <span class="tag">.NET Core</span><span class="tag">C#</span><span class="tag">Angular</span>
+        <span class="tag">Azure DevOps</span><span class="tag">Microservices</span>
+        <span class="tag">SQL Server</span><span class="tag">REST APIs</span>
+      </div>
+    </div>
 
-    <!-- ============ SUMMARY ============ -->
-    <section class="cv-section">
-      <h2>Profile</h2>
-      <p>
-        Software engineer with a focus on building reliable, well-tested
-        backend services and clean, maintainable front-end code. Comfortable
-        across the stack and experienced shipping features from design through
-        deployment. Replace this paragraph with a two- or three-sentence
-        summary of who you are, what you build, and what you are looking for.
-      </p>
-    </section>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Senior Software Engineer</div>
+          <div class="card-company">Data Nova India</div>
+          <div class="card-loc">📍 Noida, India</div>
+        </div>
+        <span class="card-date">Apr 2020 – Mar 2023</span>
+      </div>
+      <ul class="card-bullets">
+        <li>Developed and maintained DNCloud and DNAPI platforms across UI, business logic, and data layers.</li>
+        <li>Engineered a high-volume data migration for 88.6 million addresses using batched SQL + C# at 100k records per batch.</li>
+        <li>Implemented polygon-based address search using SQL Server native spatial functions — no third-party geo library required.</li>
+        <li>Integrated Azure Functions, Service Bus, and Blob Storage; performance optimisations cut API response times by 35%.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">ASP.NET Core</span><span class="tag">C#</span><span class="tag">Angular</span>
+        <span class="tag">Azure</span><span class="tag">SQL Server Spatial</span>
+        <span class="tag">Entity Framework</span>
+      </div>
+    </div>
 
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="cv-section">
-      <h2>Experience</h2>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Software Engineer — International Assignment 🇳🇴</div>
+          <div class="card-company">Data Nova India</div>
+          <div class="card-loc">📍 Oslo, Norway</div>
+        </div>
+        <span class="card-date">May 2019 – Mar 2020</span>
+      </div>
+      <ul class="card-bullets">
+        <li>Embedded with an international product team in Oslo to deliver cross-functional features.</li>
+        <li>Adapted to a multicultural engineering environment with structured daily KT sessions and cross-timezone collaboration.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">ASP.NET Core</span><span class="tag">C#</span><span class="tag">JavaScript</span><span class="tag">Azure</span>
+      </div>
+    </div>
 
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">Job Title</h3>
-            <p class="org">Company Name <span class="loc">— City, Country</span></p>
-          </div>
-          <p class="dates">Mon YYYY – Present</p>
-        </header>
-        <ul class="bullets">
-          <li>Describe a measurable accomplishment (e.g., reduced deployment time by 40% by introducing CI/CD pipelines).</li>
-          <li>Highlight a technology you led or introduced and the business impact it had.</li>
-          <li>Mention collaboration: cross-functional work, mentorship, or code review practices.</li>
-        </ul>
-      </article>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Software Engineer</div>
+          <div class="card-company">Data Nova India</div>
+          <div class="card-loc">📍 Noida, India</div>
+        </div>
+        <span class="card-date">Nov 2017 – Apr 2019</span>
+      </div>
+      <ul class="card-bullets">
+        <li>Built Windows application features and bug fixes across frontend, business logic, and data-access layers.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">C#</span><span class="tag">.NET Framework</span><span class="tag">WinForms</span><span class="tag">SQL Server</span>
+      </div>
+    </div>
 
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">Previous Job Title</h3>
-            <p class="org">Previous Company <span class="loc">— City, Country</span></p>
-          </div>
-          <p class="dates">Mon YYYY – Mon YYYY</p>
-        </header>
-        <ul class="bullets">
-          <li>Result-oriented bullet describing a project you owned end-to-end.</li>
-          <li>Specific metric, scale, or scope (e.g., served 1M+ requests/day).</li>
-          <li>A technology or pattern you became known for.</li>
-        </ul>
-      </article>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Junior Engineer</div>
+          <div class="card-company">Data Nova India</div>
+          <div class="card-loc">📍 Noida, India</div>
+        </div>
+        <span class="card-date">Jun 2016 – Oct 2017</span>
+      </div>
+      <ul class="card-bullets">
+        <li>Acted as a bridge between clients and the development team — gathered requirements and resolved product issues.</li>
+        <li>Developed junior-level features and fixes in a .NET product environment.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">.NET</span><span class="tag">C#</span><span class="tag">SQL Server</span>
+      </div>
+    </div>
 
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">Internship / Earlier Role</h3>
-            <p class="org">Company Name <span class="loc">— City, Country</span></p>
-          </div>
-          <p class="dates">Mon YYYY – Mon YYYY</p>
-        </header>
-        <ul class="bullets">
-          <li>What you built and the stack you used.</li>
-          <li>A skill you developed that you still use today.</li>
-        </ul>
-      </article>
-    </section>
+  </div>
+</section>
 
-    <!-- ============ EDUCATION ============ -->
-    <section class="cv-section">
-      <h2>Education</h2>
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">// technologies</p>
+  <h2 class="section-title">Skills &amp; Technologies</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-list">
+        <span class="skill-pill">C#</span>
+        <span class="skill-pill">TypeScript</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">SQL</span>
+        <span class="skill-pill">HTML/CSS</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Backend</div>
+      <div class="skill-list">
+        <span class="skill-pill">.NET Core</span>
+        <span class="skill-pill">ASP.NET Core</span>
+        <span class="skill-pill">.NET Framework</span>
+        <span class="skill-pill">Entity Framework</span>
+        <span class="skill-pill">REST APIs</span>
+        <span class="skill-pill">Microservices</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Frontend</div>
+      <div class="skill-list">
+        <span class="skill-pill">Angular</span>
+        <span class="skill-pill">React</span>
+        <span class="skill-pill">WinForms</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Cloud — Azure</div>
+      <div class="skill-list">
+        <span class="skill-pill">Azure DevOps</span>
+        <span class="skill-pill">Azure Functions</span>
+        <span class="skill-pill">Service Bus</span>
+        <span class="skill-pill">Blob Storage</span>
+        <span class="skill-pill">Azure App Service</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Data</div>
+      <div class="skill-list">
+        <span class="skill-pill">SQL Server</span>
+        <span class="skill-pill">SQL Spatial</span>
+        <span class="skill-pill">Batch Processing</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Leadership &amp; Process</div>
+      <div class="skill-list">
+        <span class="skill-pill">Technical Leadership</span>
+        <span class="skill-pill">Agile / Scrum</span>
+        <span class="skill-pill">Code Review</span>
+        <span class="skill-pill">CI/CD</span>
+        <span class="skill-pill">Mentoring</span>
+        <span class="skill-pill">Stakeholder Mgmt</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">B.Tech / B.Sc. in Computer Science</h3>
-            <p class="org">University Name <span class="loc">— City, Country</span></p>
-          </div>
-          <p class="dates">YYYY – YYYY</p>
-        </header>
-        <ul class="bullets">
-          <li>GPA / CGPA: X.XX / Y.YY (optional)</li>
-          <li>Relevant coursework: Data Structures, Algorithms, Operating Systems, Databases, Distributed Systems.</li>
-          <li>Honors / scholarships / awards (optional).</li>
-        </ul>
-      </article>
-    </section>
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label">// things I've built</p>
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="cv-section">
-      <h2>Projects</h2>
+    <div class="project-card">
+      <div class="project-icon">⚡</div>
+      <div class="project-name">Quiz Clash</div>
+      <div class="project-desc">Real-time multiplayer quiz app with anti-cheat motion detection (gyroscope-based), built with React Native + Expo and a cloud backend.</div>
+      <div class="tags" style="margin-top:auto;">
+        <span class="tag">TypeScript</span><span class="tag">Expo</span><span class="tag">React Native</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://github.com/coddeee" target="_blank">GitHub ↗</a>
+      </div>
+    </div>
 
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">
-              Project Name
-              <a class="link" href="https://github.com/coddeee/project-repo" target="_blank" rel="noopener">[repo]</a>
-            </h3>
-            <p class="org">Tech: Python, FastAPI, PostgreSQL, Docker</p>
-          </div>
-          <p class="dates">YYYY</p>
-        </header>
-        <ul class="bullets">
-          <li>One-line description of what the project does and who it is for.</li>
-          <li>Notable technical decision or scale (e.g., handles X requests, uses Y caching strategy).</li>
-          <li>Outcome or learning: stars, users, or what you took away from building it.</li>
-        </ul>
-      </article>
+    <div class="project-card">
+      <div class="project-icon">🌍</div>
+      <div class="project-name">88.6M Address Migration</div>
+      <div class="project-desc">High-volume data migration pipeline processing 88.6 million addresses using batched SQL + C# at 100k records per batch with Melissa Address Service integration.</div>
+      <div class="tags" style="margin-top:auto;">
+        <span class="tag">C#</span><span class="tag">SQL Server</span><span class="tag">Azure</span>
+      </div>
+    </div>
 
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">
-              Another Project
-              <a class="link" href="https://github.com/coddeee/another-repo" target="_blank" rel="noopener">[repo]</a>
-            </h3>
-            <p class="org">Tech: TypeScript, React, Node.js</p>
-          </div>
-          <p class="dates">YYYY</p>
-        </header>
-        <ul class="bullets">
-          <li>What problem this project solves.</li>
-          <li>Interesting implementation detail.</li>
-        </ul>
-      </article>
-    </section>
+    <div class="project-card">
+      <div class="project-icon">🗺️</div>
+      <div class="project-name">Polygon Address Search</div>
+      <div class="project-desc">Geo-spatial address search using SQL Server native spatial functions and polygon columns — zero third-party dependencies, integrated into DNAPI platform.</div>
+      <div class="tags" style="margin-top:auto;">
+        <span class="tag">SQL Spatial</span><span class="tag">C#</span><span class="tag">ASP.NET Core</span>
+      </div>
+    </div>
 
-    <!-- ============ SKILLS ============ -->
-    <section class="cv-section">
-      <h2>Skills &amp; Technologies</h2>
-      <dl class="skills">
-        <dt>Languages</dt>
-        <dd>Python, JavaScript / TypeScript, Java, Go, SQL</dd>
+    <div class="project-card">
+      <div class="project-icon">🚀</div>
+      <div class="project-name">CI/CD Pipeline Overhaul</div>
+      <div class="project-desc">Led the adoption of Azure DevOps CI/CD across CG Infinity's SaaS product — cut deployment time by 40% and reduced manual release risk for a 5-engineer team.</div>
+      <div class="tags" style="margin-top:auto;">
+        <span class="tag">Azure DevOps</span><span class="tag">Microservices</span><span class="tag">.NET Core</span>
+      </div>
+    </div>
 
-        <dt>Frameworks</dt>
-        <dd>React, Node.js, Express, FastAPI, Django, Spring Boot</dd>
+    <div class="project-card">
+      <div class="project-icon">💼</div>
+      <div class="project-name">Kaam Swaraj</div>
+      <div class="project-desc">Mobile + server app for gig work and job matching, built with TypeScript mobile client and a C# backend service.</div>
+      <div class="tags" style="margin-top:auto;">
+        <span class="tag">C#</span><span class="tag">TypeScript</span><span class="tag">Mobile</span>
+      </div>
+    </div>
 
-        <dt>Databases</dt>
-        <dd>PostgreSQL, MySQL, MongoDB, Redis</dd>
+    <div class="project-card">
+      <div class="project-icon">🤖</div>
+      <div class="project-name">Telegram Bot</div>
+      <div class="project-desc">Python-based Telegram automation bot, forked and extended with custom features.</div>
+      <div class="tags" style="margin-top:auto;">
+        <span class="tag">Python</span><span class="tag">Telegram API</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://github.com/coddeee/tg_bot" target="_blank">GitHub ↗</a>
+      </div>
+    </div>
 
-        <dt>DevOps &amp; Cloud</dt>
-        <dd>Docker, Kubernetes, AWS, GitHub Actions, CI/CD</dd>
+  </div>
+</section>
 
-        <dt>Tools</dt>
-        <dd>Git, Linux, VS Code, Jira, Figma</dd>
+<!-- EDUCATION & CERTS -->
+<section>
+  <p class="section-label">// education &amp; credentials</p>
+  <h2 class="section-title">Education &amp; Certifications</h2>
 
-        <dt>Practices</dt>
-        <dd>TDD, Code Review, Agile / Scrum, System Design</dd>
-      </dl>
-    </section>
+  <div class="card" style="margin-bottom: 1rem;">
+    <div class="card-header">
+      <div>
+        <div class="card-title">B.Tech, Computer Science</div>
+        <div class="card-company">I.T.S Engineering College, Greater Noida</div>
+      </div>
+      <span class="card-date">2012 – 2016</span>
+    </div>
+  </div>
 
-    <!-- ============ FOOTER ============ -->
-    <footer class="cv-footer">
-      <p>Last updated: <time datetime="2026-05">May 2026</time> · <a href="cv.pdf">Download PDF</a></p>
-    </footer>
+  <div class="cert-card">
+    <div class="cert-icon">🏆</div>
+    <div>
+      <div class="cert-name">Microsoft Certified: Azure Developer Associate</div>
+      <div class="cert-issuer">Microsoft · Issued June 2022</div>
+    </div>
+  </div>
+</section>
 
-  </main>
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">// let's connect</p>
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-grid">
+    <a class="contact-item" href="mailto:chauhana089@gmail.com">
+      <span class="contact-icon">✉</span>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">chauhana089@gmail.com</div>
+      </div>
+    </a>
+    <a class="contact-item" href="https://github.com/coddeee" target="_blank" rel="noopener">
+      <span class="contact-icon">⌥</span>
+      <div>
+        <div class="contact-label">GitHub</div>
+        <div class="contact-value">github.com/coddeee</div>
+      </div>
+    </a>
+    <a class="contact-item" href="https://www.linkedin.com/in/abhishek-chauhan" target="_blank" rel="noopener">
+      <span class="contact-icon">in</span>
+      <div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">linkedin.com/in/abhishek-chauhan</div>
+      </div>
+    </a>
+    <a class="contact-item" href="https://coddeee.github.io" target="_blank" rel="noopener">
+      <span class="contact-icon">🌐</span>
+      <div>
+        <div class="contact-label">Portfolio</div>
+        <div class="contact-value">coddeee.github.io</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  &lt;built by abhishek · 2026 /&gt; · open source on <a href="https://github.com/coddeee/coddeee.github.io" target="_blank">GitHub</a>
+</footer>
+
 </body>
 </html>
