@@ -3,169 +3,364 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhishek Chauhan — Full-Stack .NET Engineer</title>
-  <meta name="description" content="Professional portfolio of Abhishek Chauhan — 10-year Full-Stack .NET Engineer, Technical Lead, Microsoft Certified Azure Developer." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Abhishek Chauhan — Senior Full-Stack Engineer &amp; Technical Lead</title>
+
+  <meta name="description" content="Abhishek Chauhan is a senior full-stack engineer and technical lead with 9+ years building enterprise-grade .NET and web platforms across ERP and retail — and the teams that ship them." />
+  <meta name="author" content="Abhishek Chauhan" />
+  <meta name="theme-color" content="#0b0c0f" />
+  <link rel="canonical" href="https://www.abhishekchauhan.dev/" />
+
+  <!-- Open Graph / social preview (matters for shared/display links) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.abhishekchauhan.dev/" />
+  <meta property="og:title" content="Abhishek Chauhan — Senior Full-Stack Engineer &amp; Technical Lead" />
+  <meta property="og:description" content="9+ years architecting and shipping enterprise software: full-stack .NET, modern JavaScript, cloud &amp; DevOps." />
+  <meta property="og:image" content="assets/headshot@2x.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Abhishek Chauhan — Senior Full-Stack Engineer &amp; Technical Lead" />
+  <meta name="twitter:description" content="9+ years architecting and shipping enterprise software: full-stack .NET, modern JavaScript, cloud &amp; DevOps." />
+  <meta name="twitter:image" content="assets/headshot@2x.jpg" />
+
+  <!-- Favicon: gold monogram, no external request -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0f'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23d4af6a'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Person schema for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abhishek Chauhan",
+    "jobTitle": "Senior Full-Stack Engineer & Technical Lead",
+    "url": "https://www.abhishekchauhan.dev/",
+    "email": "mailto:abhi.sunny.chauhan@gmail.com",
+    "telephone": "+91-95601-55401",
+    "address": { "@type": "PostalAddress", "addressLocality": "Noida", "addressRegion": "Uttar Pradesh", "addressCountry": "IN" },
+    "sameAs": ["https://www.linkedin.com/in/abhishekchauhan-dev/", "https://github.com/coddeee"],
+    "knowsAbout": ["C#", ".NET Core", "ASP.NET", "React", "Angular", "Vue.js", "SQL Server", "Azure", "Docker", "Kubernetes", "Microservices", "Distributed Systems", "Apache Kafka"],
+    "alumniOf": "ITS College of Engineering & Technology",
+    "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Microsoft Certified: Azure Developer Associate" }
+  }
+  </script>
 </head>
 <body>
-  <main class="cv">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- ============ HEADER ============ -->
-    <header class="cv-header">
-      <h1 class="name">Abhishek Chauhan</h1>
-      <p class="title">Full-Stack .NET Engineer &amp; Technical Lead</p>
-      <ul class="contact" aria-label="Contact information">
-        <li><a href="mailto:chauhana089@gmail.com">chauhana089@gmail.com</a></li>
-        <li><span>Noida, India</span></li>
-        <li><a href="https://github.com/coddeee" target="_blank" rel="noopener">github.com/coddeee</a></li>
-        <li><a href="https://www.linkedin.com/in/abhishekchauhan-dev/" target="_blank" rel="noopener">linkedin.com/in/abhishekchauhan-dev</a></li>
-        <li><a href="https://coddeee.github.io" target="_blank" rel="noopener">coddeee.github.io</a></li>
-      </ul>
-    </header>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Abhishek Chauhan — home">
+        <span class="brand-mark">AC</span>
+        <span class="brand-name">Abhishek&nbsp;Chauhan</span>
+      </a>
 
-    <!-- ============ SUMMARY ============ -->
-    <section class="cv-section">
-      <h2>Profile</h2>
-      <p>
-        Results-driven Full-Stack .NET Engineer with 10 years of end-to-end product delivery across enterprise SaaS, data platforms, and cloud-native systems. Currently leading a team of 5 as Manager I (Technical Lead) at CG Infinity, architecting Microservices solutions on Microsoft Azure. Six years of team leadership experience, international delivery in Oslo, Norway, and a consistent track record of proactive client engagement and CI/CD-driven efficiency. Microsoft Certified Azure Developer Associate.
-      </p>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-ghost btn-sm" href="assets/Abhishek-Chauhan-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/Abhishek-Chauhan-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Senior Full-Stack Engineer · .NET &amp; Web</p>
+          <h1 class="hero-title">Abhishek<br />Chauhan</h1>
+          <p class="hero-lead">
+            I architect and ship enterprise-grade software — full-stack <strong>.NET</strong>
+            platforms, ERP and retail systems, and the teams that deliver them.
+          </p>
+          <p class="hero-sub">
+            9+ years turning complex business requirements into robust, production-ready products.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-ghost" href="assets/Abhishek-Chauhan-Resume.pdf" target="_blank" rel="noopener">
+              Download résumé
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            </a>
+          </div>
+          <p class="hero-meta">Based in Noida, India · Open to high-impact engineering &amp; leadership roles</p>
+        </div>
+
+        <div class="hero-portrait reveal">
+          <div class="portrait-frame">
+            <img src="assets/headshot@2x.jpg" alt="Portrait of Abhishek Chauhan" width="488" height="614" />
+            <span class="portrait-tag">9+ yrs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="At a glance">
+      <div class="container stats-grid">
+        <div class="stat reveal">
+          <span class="stat-fig">09<span class="plus">+</span></span>
+          <span class="stat-cap">Years of experience</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-fig">Full-Stack</span>
+          <span class="stat-cap">Front-end to back-end</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-fig">Cloud</span>
+          <span class="stat-cap">Azure · Docker · CI/CD</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-fig">Agile</span>
+          <span class="stat-cap">Delivery, mentoring &amp; lead</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>Engineering that earns trust.</h2>
+        </div>
+        <div class="about-body reveal">
+          <p>
+            For nine years I've helped companies turn ambitious ideas into dependable software.
+            My home turf is the Microsoft stack — <strong>C#, .NET Core and .NET Framework,
+            ASP.NET MVC and Web API</strong> — paired with modern front-end work in
+            <strong>React, Angular and Vue</strong>. I design the data layer as carefully as the
+            interface, and I care as much about <em>how</em> a team ships as <em>what</em> it ships.
+          </p>
+          <p>
+            Across ERP, retail and enterprise product teams I've owned features end to end —
+            gathering requirements, architecting the solution, writing the code, hardening it with
+            tests, and shipping it through CI/CD pipelines. I've mentored developers, partnered with
+            QA and leadership, and consistently delivered high-quality results under real-world
+            deadlines.
+          </p>
+          <p>
+            I'm as comfortable with clients as I am in the codebase. On an on-site engagement in
+            <strong>Oslo, Norway</strong>, I worked face-to-face with the client — understanding
+            their needs, shaping them into clear requirements, and building the software to deliver
+            on them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUOTE ============ -->
+    <section class="quote-band">
+      <div class="container">
+        <blockquote class="reveal">
+          <p>“Great software is equal parts architecture, craftsmanship, and the team that ships it.”</p>
+          <cite>— Abhishek Chauhan</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ EXPERTISE ============ -->
+    <section class="section" id="expertise">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Expertise</p>
+          <h2>What I bring to the table</h2>
+          <p class="section-intro">A full-stack toolkit, sharpened across nine years of production work.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+            </span>
+            <h3>Front-End Engineering</h3>
+            <p>Responsive, accessible interfaces with a sharp eye for UI/UX.</p>
+            <ul class="tags">
+              <li>React</li><li>Angular</li><li>Vue.js</li><li>JavaScript</li><li>HTML5</li><li>CSS</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 7v6l8 4 8-4V7"/><path d="M12 11v6"/></svg>
+            </span>
+            <h3>Back-End &amp; APIs</h3>
+            <p>Robust services and RESTful APIs on the modern .NET platform.</p>
+            <ul class="tags">
+              <li>C#</li><li>.NET Core</li><li>.NET Framework</li><li>ASP.NET MVC</li><li>Web API</li><li>Microservices</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+            </span>
+            <h3>Data &amp; Databases</h3>
+            <p>Modeling, migration and tuning across major relational engines.</p>
+            <ul class="tags">
+              <li>SQL Server</li><li>Oracle</li><li>MySQL</li><li>Entity Framework</li><li>Data modeling</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1.3A4.5 4.5 0 0117 18H7z"/></svg>
+            </span>
+            <h3>Cloud, DevOps &amp; CI/CD</h3>
+            <p>Containerized delivery pipelines that ship reliably and often.</p>
+            <ul class="tags">
+              <li>Azure</li><li>Azure DevOps</li><li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Octopus</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </span>
+            <h3>Architecture &amp; Quality</h3>
+            <p>Distributed systems and concurrency, backed by sound patterns and disciplined testing.</p>
+            <ul class="tags">
+              <li>Distributed systems</li><li>Microservices</li><li>Apache Kafka</li><li>Design patterns</li><li>Multithreading</li><li>Unit &amp; integration testing</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.9M16 3.1A4 4 0 0116 11"/></svg>
+            </span>
+            <h3>Ways of Working</h3>
+            <p>Agile delivery, clear communication and growing the people around me.</p>
+            <ul class="tags">
+              <li>Agile / Scrum</li><li>Mentoring</li><li>Cross-functional</li><li>Requirement analysis</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- ============ EXPERIENCE ============ -->
-    <section class="cv-section">
-      <h2>Experience</h2>
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>A track record of shipping</h2>
+        </div>
 
-      <article class="entry">
-        <header class="entry-header">
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <h3>Senior Full-Stack Developer <span class="tl-sep">·</span> Associate II</h3>
+                <span class="tl-date">Mar 2023 — Present</span>
+              </div>
+              <p class="tl-org">CG Infinity India</p>
+              <ul class="tl-points">
+                <li>Build new product functionality across services, desktop and web applications.</li>
+                <li>Partner with front-end, back-end, QA and the CTO to align engineering with business goals.</li>
+                <li>Drive R&amp;D into new technologies for the roadmap and lead migrations of core logic.</li>
+                <li>Ship through CI/CD pipelines with Docker on Azure, safeguarded by unit, integration and debugging discipline.</li>
+                <li>Operate in an Agile/Scrum environment, delivering incrementally with cross-functional teams.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <h3>Full-Stack Developer</h3>
+                <span class="tl-date">Jul 2016 — Mar 2023</span>
+              </div>
+              <p class="tl-org">Data Nova India Pvt. Ltd.</p>
+              <ul class="tl-points">
+                <li>Built ERP and retail software across web and mobile platforms.</li>
+                <li>Developed full-stack applications that processed, analyzed and visualized data.</li>
+                <li>Managed time-sensitive releases — content changes and database upgrades — with precision.</li>
+                <li>Planned, wrote and debugged applications end to end, and led migrations of business logic.</li>
+                <li>Worked Agile/Scrum with CI/CD and containerization to deliver reliable software.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <div class="edu reveal">
           <div>
-            <h3 class="role">Manager I — Technical Lead</h3>
-            <p class="org">CG Infinity <span class="loc">— Noida, India (On-site)</span></p>
+            <p class="eyebrow">Education</p>
+            <h3 class="edu-school">ITS College of Engineering &amp; Technology</h3>
+            <p class="edu-detail">Computer Science · Greater Noida, India</p>
           </div>
-          <p class="dates">Mar 2023 – Present</p>
-        </header>
-        <ul class="bullets">
-          <li>Architect and deliver enterprise Microservices SaaS products on .NET Core and Angular, deployed on Microsoft Azure.</li>
-          <li>Lead a team of 5 engineers — sprint planning, code reviews, mentoring, and stakeholder communication.</li>
-          <li>Drove CI/CD pipeline adoption via Azure DevOps, reducing deployment time by 40%.</li>
-          <li>Champion proactive client engagement: surface known issues before clients report them and present data-backed timelines to manage scope.</li>
-          <li>Conduct POCs and future-scope farming to identify technology upgrade opportunities for clients.</li>
-        </ul>
-      </article>
+          <span class="edu-year">2012 — 2016</span>
+        </div>
 
-      <article class="entry">
-        <header class="entry-header">
+        <div class="edu reveal">
           <div>
-            <h3 class="role">Senior Software Engineer</h3>
-            <p class="org">Data Nova India <span class="loc">— Noida, India</span></p>
+            <p class="eyebrow">Certification</p>
+            <h3 class="edu-school">Microsoft Certified — Azure Developer Associate</h3>
+            <p class="edu-detail">Microsoft</p>
           </div>
-          <p class="dates">Apr 2020 – Mar 2023</p>
-        </header>
-        <ul class="bullets">
-          <li>Developed and maintained DNCloud and DNAPI platforms across UI, business logic, and data layers.</li>
-          <li>Engineered a high-volume data migration for 88.6 million addresses (Melissa Address Service) using batched SQL + C# at 100k records per batch.</li>
-          <li>Implemented polygon-based address search using SQL Server native spatial functions — no third-party geo library required.</li>
-          <li>Integrated Azure Functions, Service Bus, and Blob Storage; performance optimisations cut API response times by 35%.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">Software Engineer — International Assignment</h3>
-            <p class="org">Data Nova India <span class="loc">— Oslo, Norway</span></p>
-          </div>
-          <p class="dates">May 2019 – Mar 2020</p>
-        </header>
-        <ul class="bullets">
-          <li>Embedded with an international product team in Oslo to deliver cross-functional features.</li>
-          <li>Adapted to a multicultural engineering environment with structured daily KT sessions and cross-timezone collaboration.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">Software Engineer</h3>
-            <p class="org">Data Nova India <span class="loc">— Noida, India</span></p>
-          </div>
-          <p class="dates">Nov 2017 – Apr 2019</p>
-        </header>
-        <ul class="bullets">
-          <li>Built Windows application features and bug fixes across frontend, business logic, and data-access layers.</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">Junior Engineer</h3>
-            <p class="org">Data Nova India <span class="loc">— Noida, India</span></p>
-          </div>
-          <p class="dates">Jun 2016 – Oct 2017</p>
-        </header>
-        <ul class="bullets">
-          <li>Acted as a bridge between clients and the development team — gathered requirements and resolved product issues.</li>
-          <li>Developed junior-level features and fixes in a .NET product environment.</li>
-        </ul>
-      </article>
-
+          <span class="edu-year">2022</span>
+        </div>
+      </div>
     </section>
 
-    <!-- ============ EDUCATION ============ -->
-    <section class="cv-section">
-      <h2>Education &amp; Certification</h2>
-
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">B.Tech, Computer Science</h3>
-            <p class="org">I.T.S Engineering College <span class="loc">— Greater Noida, India</span></p>
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something dependable.</h2>
+          <p class="contact-lead">
+            Open to senior engineering and technical leadership roles, consulting and collaborations.
+            The fastest way to reach me is email.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:abhi.sunny.chauhan@gmail.com">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              abhi.sunny.chauhan@gmail.com
+            </a>
+            <a class="btn btn-ghost" href="tel:+919560155401">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+              +91 95601 55401
+            </a>
           </div>
-          <p class="dates">2012 – 2016</p>
-        </header>
-      </article>
-
-      <article class="entry">
-        <header class="entry-header">
-          <div>
-            <h3 class="role">Microsoft Certified: Azure Developer Associate</h3>
-            <p class="org">Microsoft</p>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/abhishekchauhan-dev/" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a>
+            <span class="dot">·</span>
+            <a href="https://github.com/coddeee" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub</a>
           </div>
-          <p class="dates">Jun 2022</p>
-        </header>
-      </article>
-
+        </div>
+      </div>
     </section>
-
-    <!-- ============ SKILLS ============ -->
-    <section class="cv-section">
-      <h2>Skills &amp; Technologies</h2>
-      <dl class="skills">
-        <dt>Languages</dt>
-        <dd>C#, TypeScript, JavaScript, SQL, HTML / CSS</dd>
-
-        <dt>Backend</dt>
-        <dd>.NET Core, ASP.NET Core, .NET Framework, Entity Framework, REST APIs, Microservices</dd>
-
-        <dt>Frontend</dt>
-        <dd>Angular, React, WinForms</dd>
-
-        <dt>Cloud — Azure</dt>
-        <dd>Azure DevOps, Azure Functions, Service Bus, Blob Storage, Azure App Service</dd>
-
-        <dt>Data</dt>
-        <dd>SQL Server, SQL Server Spatial, High-volume batch processing</dd>
-
-        <dt>Leadership</dt>
-        <dd>Technical Leadership, Agile / Scrum, CI/CD, Code Review, Mentoring, Stakeholder Management</dd>
-      </dl>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
-    <footer class="cv-footer">
-      <p>Last updated: <time datetime="2026-06">June 2026</time> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/abhishekchauhan-dev/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/coddeee" target="_blank" rel="noopener">GitHub</a></p>
-    </footer>
-
   </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand"><span class="brand-mark sm">AC</span> Abhishek Chauhan</span>
+      <p class="footer-note">© <span id="year"></span> Abhishek Chauhan. Senior Full-Stack Engineer.</p>
+      <a class="footer-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
